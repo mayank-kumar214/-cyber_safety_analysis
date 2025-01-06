@@ -61,13 +61,13 @@ plt.show()
 
 # Correlation Heatmap
 correlation_matrix = df[['Daily Usage (hours)', 'Awareness Level', '2FA Adoption (%)', 'Victimization (%)']].corr()
-plt.figure(figsize=(8, 6))
-plt.matshow(correlation_matrix, fignum=1, cmap='coolwarm', alpha=0.8)
+plt.matshow(correlation_matrix, cmap='coolwarm', alpha=0.8)
 plt.colorbar()
-plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.columns, rotation=45, ha='left')
-plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
-plt.title('Correlation Heatmap', pad=20)
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.columns, fontsize=10, rotation=45, ha='right')
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns, fontsize=10)
+plt.title('Correlation Heatmap', pad=30, fontsize=14)
 plt.show()
+
 
 # Plot: Two-Factor Authentication Adoption by Age Group
 plt.figure(figsize=(10, 6))
